@@ -5,15 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9757020e-ce61-4544-9db6-d5c3d17c133e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/globant/ESPN_DeactivateUserTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/globant/ESPN_LoginTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/globant/ESPN_LogoutTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/globant/Root.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/resources/Suite.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OscarAraque_TestCase_Design_TestNG.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/OscarAraque_TestCase_Design_TestNG.ipr" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/OscarAraque_TestCase_Design_TestNG.iws" beforeDir="false" afterPath="$PROJECT_DIR$/OscarAraque_TestCase_Design_TestNG.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/globant/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/globant/AppTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/globant/Base.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -293,6 +285,17 @@
       <option name="TEST_SEARCH_SCOPE">
         <value defaultName="wholeProject" />
       </option>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
