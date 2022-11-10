@@ -15,6 +15,6 @@ Basado en el ejercicio de modelaje de escenarios para:
 ● Inhabilitar cuenta
 Obtener los selectores que creen pertinentes para manejar los procesos enunciados
 anteriormente, por favor, generar una lista cumpliendo las siguientes condiciones:
-<Nombre Vista>
-<Objeto> - <Selector>
-<Imagen con el objeto resaltado>
+Nombre Vista
+Objeto - Selector
+Imagen con el objeto resaltado
