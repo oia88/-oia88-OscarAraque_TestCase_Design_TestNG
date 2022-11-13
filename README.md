@@ -4,8 +4,8 @@ ESPN web page):
 How to send it: Create a branch from your github repository with the next structure
 ESPN_Final_Test/[FULL NAME]. Then send by email as the other workshops
 Web Browser URL: https://www.espnqa.com/?src=com&_adblock=true&espn=cloud
-Create a single test for the following steps:
-A. Doing Login
+Create a single test for the following steps: </br>
+A. Doing Login</br>
 1. Go to https://www.espnqa.com/?src=com&_adblock=true&espn=cloud
 2. Click ‘Log in’ element - Validate a modal is present and contains:
 a. ‘ESPN’ Logo
@@ -24,17 +24,16 @@ a. Validate the element 'Nav text' has the right information previously
 entered in the sign up modal: 'Welcome {{username}}!'
 8. Click 'Log Out' element and validate:
 a. The user has logged out successfully i.e. Validate the element 'Nav text'
-has text: 'Welcome!' without user name specified
-B. Doing Logout
+has text: 'Welcome!' without user name specified</br>
+B. Doing Logout</br>
 1. Once logged in, create the flow to log out from current session.
-2. Validate session is log out from user panel
-C. Deactivate Account
-Page 2 of 2
+2. Validate session is log out from user panel</br>
+C. Deactivate Account</br>
 1. Once Logged in create the flow to deactivate account (is mandatory to explore
 the page to understand the flow
 2. Validate the check green action when the account is deactivated
-3. Try to log in again with the same account to get message from page, validate it.
-Remember:
+3. Try to log in again with the same account to get message from page, validate it.</br>
+Remember:</br>
 ● You should improve your code compared to the past exercise applied to
 ESPN web application. Include the best practices topics given.
 ● Avoid using implicit waits, they end up creating idle times in the test executions.
