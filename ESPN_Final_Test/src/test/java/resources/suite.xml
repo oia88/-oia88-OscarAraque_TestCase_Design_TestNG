@@ -1,0 +1,25 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="ESPN Final Test Suite" verbose="1">
+    <listeners>
+        <listener class-name="utils.Listener"/>
+    </listeners>
+    <parameter name="url" value="https://www.espnqa.com/?src=com&amp;_adblock=true&amp;espn=cloud"/>
+    <test name="Doing Login">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="tests.LoginTest"/>
+        </classes>
+    </test>
+    <test name="Doing Logout">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="tests.LogoutTest"/>
+        </classes>
+    </test>
+    <test name="Deactivate Account">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="tests.DeactivateAccountTest"/>
+        </classes>
+    </test>
+</suite>
