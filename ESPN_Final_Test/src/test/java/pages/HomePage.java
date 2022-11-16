@@ -82,7 +82,7 @@ public class HomePage extends BasePage{
         clickLoginButton();
     }
     public void logout(){
-        hoverUserIcon();
+        clickOnPersonIcon();
         clickLogoutLink();
     }
 }

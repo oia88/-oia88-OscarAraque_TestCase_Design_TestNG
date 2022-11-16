@@ -8,10 +8,10 @@
         <parameter name="browser" value="chrome"/>
         <classes>
             <!--<class name="tests.LoginTest"/>-->
-            <class name="tests.WatchTest"/>
+           <!-- <class name="tests.WatchTest"/>-->
         </classes>
     </test>
-    <!--<test name="Doing Logout">
+    <test name="Doing Logout">
         <parameter name="browser" value="chrome"/>
         <classes>
             <class name="tests.LogoutTest"/>
@@ -20,7 +20,7 @@
     <test name="Deactivate Account">
         <parameter name="browser" value="chrome"/>
         <classes>
-            <class name="tests.DeactivateAccountTest"/>
+           <!-- <class name="tests.DeactivateAccountTest"/>-->
         </classes>
-    </test>-->
+    </test>
 </suite>
