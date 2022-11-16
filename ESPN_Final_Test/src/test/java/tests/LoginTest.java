@@ -11,13 +11,13 @@ public class LoginTest extends BaseTest {
                 "Element: 'ESPN logo' is present",
                 homePage.espnLogoIsDisplayed(),
                 is(true));
-        homePage.clickOnPersonIcon();
+        homePage.clickOnUserIcon();
         homePage.clickOnLoginLink();
         checking(
                 "Element: 'Modal' is present",
                 homePage.modalIsDisplayed(),
                 is(true));
-        homePage.changeToIframeSection();
+        homePage.switchToIframeSection();
         checking(
                 "Element: 'Login button' is present",
                 homePage.loginButtonIsDisplayed(),

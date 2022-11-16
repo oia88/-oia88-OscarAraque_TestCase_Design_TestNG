@@ -26,7 +26,6 @@ public class WatchTest extends BaseTest{
                 is(true));
         watchPage.clickSecondCarousel();
         Thread.sleep(10000);
-        // agregar wait
         checking("Element: 'Close 'X' Button' is present",
                 watchPage.closeButtonIsDisplayed(),
                 is(true));

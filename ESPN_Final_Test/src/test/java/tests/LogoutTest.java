@@ -17,5 +17,4 @@ public class LogoutTest extends BaseTest{
                 homePage.navTextIsDisplayed(),
                 is(true));
     }
-
 }

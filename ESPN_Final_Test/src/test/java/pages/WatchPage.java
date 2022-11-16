@@ -20,8 +20,6 @@ public class WatchPage extends HomePage{
     private WebElement carouselCloseButton;
 
 
-
-
     public boolean carouselIsDisplayed(){ return carouselSingle.isDisplayed(); }
     public boolean carouselTitleIsDisplayed(){ return carouselTitle.isDisplayed(); }
     public boolean carouselDescriptionIsDisplayed(){ return carouselDescription.isDisplayed(); }
@@ -32,5 +30,4 @@ public class WatchPage extends HomePage{
         getDriver().navigate().back();
         return new HomePage(getDriver());
     }
-
 }

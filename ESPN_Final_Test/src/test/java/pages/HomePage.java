@@ -1,5 +1,6 @@
 package pages;
 
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -10,7 +11,7 @@ public class HomePage extends BasePage{
         super(driver);
     }
     @FindBy(id = "global-user-trigger")
-    private WebElement personIcon;
+    private WebElement userIcon;
     @FindBy(css = "li.user ul.account-management li:nth-child(7)")
     private WebElement loginLink;
     @FindBy(linkText = "ESPN")
@@ -27,16 +28,27 @@ public class HomePage extends BasePage{
     private WebElement signUpButton;
     @FindBy(css = ".pillar.watch > a")
     private WebElement watchLink;
-    @FindBy(id = "global-user-trigger")
-    private WebElement userIcon;
     @FindBy(className = "display-user")
     private WebElement navText;
     @FindBy(css = "li.user ul.account-management li:nth-child(8)")
     private WebElement logoutLink;
+    @FindBy(css = ".account-management li:nth-child(5) > a")
+    private WebElement espnProfile;
+    @FindBy(css = "#AccountDeleteLink")
+    private WebElement accountDeleteLink;
+    @FindBy(css = "[data-testid='BtnSubmit']")
+    private WebElement deleteButton;
+    @FindBy(css = "[data-testid='BtnSubmit']")
+    private WebElement okButton;
+    @FindBy(css = "[data-testid='TextBlock']")
+    private WebElement deactivateMessage;
+    @FindBy(css = ".promo-banner-container iframe")
+    private WebElement banner;
+    @FindBy(css = "div.PromoBanner__CloseBtn")
+    private WebElement bannerCloseButton;
 
-
-    public void clickOnPersonIcon(){
-        clickElement(personIcon);
+    public void clickOnUserIcon(){
+        clickElement(userIcon);
     }
     public void clickOnLoginLink(){
         clickElement(loginLink);
@@ -60,7 +72,7 @@ public class HomePage extends BasePage{
     public boolean signUpButtonIsDisplayed(){
         return signUpButton.isDisplayed();
     }
-    public void changeToIframeSection(){
+    public void switchToIframeSection(){
         this.switchToIframe(modal);
     }
     public WatchPage clickLinkWatch(){
@@ -74,15 +86,37 @@ public class HomePage extends BasePage{
     public boolean navTextIsDisplayed(){ return navText.isDisplayed(); }
     public void clickLogoutLink(){ clickElement(logoutLink); }
     public void login(){
-        clickOnPersonIcon();
+        clickOnUserIcon();
         clickOnLoginLink();
-        changeToIframeSection();
-        entryEmailOnInput("oscar.araque@globant.com");
-        entryPasswordOnInput("@Millonarios");
+        switchToIframeSection();
+        entryEmailOnInput("taeproof6@gmail.com");
+        entryPasswordOnInput("@Testing2022");
         clickLoginButton();
     }
     public void logout(){
-        clickOnPersonIcon();
+        clickOnUserIcon();
         clickLogoutLink();
+    }
+    public void clickOnEspnProfile(){ clickElement(espnProfile); }
+    public void clickOnAccountDeleteLink(){ clickElement(accountDeleteLink); }
+    public void clickOnDeleteAccountButton(){ clickElement(deleteButton); }
+    public void refreshOnOkButton(){
+        getDriver().navigate().refresh();
+    }
+    public boolean deactivateMessageIsDisplayed(){ return deactivateMessage.isDisplayed(); }
+    public boolean verifyBanner(){
+        boolean isBanner = true;
+        try{
+            waitForVisibility(banner);
+        } catch (TimeoutException e){
+            isBanner = false;
+        }
+        return isBanner;
+    }
+    public void closeBanner(){
+        if(this.verifyBanner()){
+            switchToIframe(banner);
+            clickElement(bannerCloseButton);
+        }
     }
 }
