@@ -6,19 +6,18 @@ import static org.hamcrest.Matchers.is;
 
 public class LoginTest extends BaseTest {
     @Test
-    public void login() throws InterruptedException {
+    public void login() {
         checking(
                 "Element: 'ESPN logo' is present",
                 homePage.espnLogoIsDisplayed(),
                 is(true));
         homePage.clickOnPersonIcon();
         homePage.clickOnLoginLink();
-        //Thread.sleep(3000);
-        homePage.changeToIframeSection();
         checking(
                 "Element: 'Modal' is present",
                 homePage.modalIsDisplayed(),
                 is(true));
+        homePage.changeToIframeSection();
         checking(
                 "Element: 'Login button' is present",
                 homePage.loginButtonIsDisplayed(),

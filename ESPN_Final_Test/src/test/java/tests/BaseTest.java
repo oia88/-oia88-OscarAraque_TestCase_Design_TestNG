@@ -7,13 +7,15 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import pages.HomePage;
+import pages.WatchPage;
 import reporting.Reporter;
 
 import static java.lang.String.format;
 
 public class BaseTest {
-    private Driver driver;
+    protected Driver driver;
     protected HomePage homePage;
+    protected WatchPage watchPage;
 
     @Parameters({"browser", "url"})
     @BeforeTest()

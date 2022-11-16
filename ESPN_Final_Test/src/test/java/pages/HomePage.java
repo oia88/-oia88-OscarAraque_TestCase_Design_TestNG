@@ -1,8 +1,8 @@
 package pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
 public class HomePage extends BasePage{
@@ -15,7 +15,7 @@ public class HomePage extends BasePage{
     private WebElement loginLink;
     @FindBy(linkText = "ESPN")
     private WebElement espnLogo;
-    @FindBy(css = "#oneid-frame")
+    @FindBy(css = "#oneid-iframe")
     private WebElement modal;
     @FindBy(id = "InputLoginValue")
     private WebElement emailInput;
@@ -25,6 +25,14 @@ public class HomePage extends BasePage{
     private WebElement loginButton;
     @FindBy(id = "BtnCreateAccount")
     private WebElement signUpButton;
+    @FindBy(css = ".pillar.watch > a")
+    private WebElement watchLink;
+    @FindBy(id = "global-user-trigger")
+    private WebElement userIcon;
+    @FindBy(className = "display-user")
+    private WebElement navText;
+    @FindBy(css = "li.user ul.account-management li:nth-child(8)")
+    private WebElement logoutLink;
 
 
     public void clickOnPersonIcon(){
@@ -54,5 +62,27 @@ public class HomePage extends BasePage{
     }
     public void changeToIframeSection(){
         this.switchToIframe(modal);
+    }
+    public WatchPage clickLinkWatch(){
+        clickElement(watchLink);
+        return new WatchPage(getDriver());
+    }
+    public void hoverUserIcon(){
+        Actions action = new Actions(getDriver());
+        action.moveToElement(userIcon).perform();
+    }
+    public boolean navTextIsDisplayed(){ return navText.isDisplayed(); }
+    public void clickLogoutLink(){ clickElement(logoutLink); }
+    public void login(){
+        clickOnPersonIcon();
+        clickOnLoginLink();
+        changeToIframeSection();
+        entryEmailOnInput("oscar.araque@globant.com");
+        entryPasswordOnInput("@Millonarios");
+        clickLoginButton();
+    }
+    public void logout(){
+        hoverUserIcon();
+        clickLogoutLink();
     }
 }
